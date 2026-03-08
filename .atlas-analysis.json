@@ -1,0 +1,121 @@
+{
+  "projectType": "saas",
+  "projectName": "MEP Failure Management System",
+  "projectDescription": "Equipment failure reporting and tracking system for the Costa Rican Ministry of Education",
+  "theme": "linden",
+  "primaryColor": "#2c3e50",
+  "lightColor": "#3498db",
+  "darkColor": "#1a252f",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "introduction",
+              "getting-started"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "features/printer-reports",
+              "features/computer-reports",
+              "features/status-workflow",
+              "features/orbe-integration"
+            ]
+          },
+          {
+            "group": "User Guides",
+            "pages": [
+              "guides/submitting-reports",
+              "guides/managing-reports",
+              "guides/smtp-configuration",
+              "guides/uploading-orbe-boleta"
+            ]
+          },
+          {
+            "group": "Administration",
+            "pages": [
+              "admin/equipment-management",
+              "admin/technician-management",
+              "admin/email-notifications"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "api/overview",
+              "api/authentication"
+            ]
+          },
+          {
+            "group": "Reports",
+            "pages": [
+              "api/reports/create-printer-report",
+              "api/reports/create-computer-report",
+              "api/reports/list-reports",
+              "api/reports/update-status"
+            ]
+          },
+          {
+            "group": "Equipment",
+            "pages": [
+              "api/equipment/list-printers",
+              "api/equipment/list-computers",
+              "api/equipment/autocomplete"
+            ]
+          },
+          {
+            "group": "Technicians",
+            "pages": [
+              "api/technicians/list",
+              "api/technicians/get-email"
+            ]
+          },
+          {
+            "group": "ORBE Integration",
+            "pages": [
+              "api/orbe/parse-boleta"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "api/config/smtp"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Dual module system for printers and computers",
+    "Real-time report status tracking with workflow management",
+    "Automated email notifications to stakeholders",
+    "ORBE ticket system integration with HTML parsing",
+    "Equipment database with autocomplete",
+    "Excel report generation",
+    "MongoDB-based data persistence",
+    "FastAPI REST API backend"
+  ],
+  "publicApiSurface": [
+    "POST /api/reports - Create printer failure report",
+    "POST /api/reports-computadoras - Create computer failure report",
+    "GET /api/reports - List all reports",
+    "PATCH /api/reports/{id}/estado - Update report status",
+    "POST /api/parse-boleta - Parse ORBE HTML boleta",
+    "GET /api/autocomplete/activos - Autocomplete asset codes",
+    "GET /api/autocomplete/informaticos - Autocomplete technician names",
+    "POST /api/smtp/configure - Configure SMTP settings",
+    "GET /api/impresoras - List printers",
+    "GET /api/computadoras - List computers"
+  ]
+}
